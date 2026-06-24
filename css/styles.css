@@ -1,132 +1,84 @@
-/* ============ESTILOS PERSONALIZADOS====================== */
+/* =================================ESTILOS PERSONALIZADOS================================== */
 
-   :root {
-    /* ===== COLORES PRINCIPALES ===== */
+:root {
+/*  COLORES PRINCIPALES  */
     --primary: #2563EB;
     --primary-light: #3B82F6;
     --secondary: #06B6D4;
-    --accent: #22C55E;
-  
-    /* ===== CORPORATIVOS ===== */
     --dark: #0F172A;
     --dark-light: #3c485b;
-    --white: #FFFFFF;
-  
-    /* ===== NEUTROS ===== */
-    --gray-light: #F8FAFC;
-    --gray: #64748B;
-    --border: #CBD5E1;
-  
-    /* ===== ESTADOS ===== */
-    --success: #22C55E;
-    --warning: #F59E0B;
-    --danger: #EF4444;
-  
-    /* ===== EFECTOS (sombras y brillos) ===== */
+
+/*  EFECTOS (sombras y brillos)  */
     --glow-blue: 0 0 20px rgba(37, 99, 235, 0.3);
     --glow-cyan: 0 0 20px rgba(6, 182, 212, 0.3);
     --glow-green: 0 0 20px rgba(34, 197, 94, 0.3);
     --shadow-card: 0 8px 20px rgba(0, 0, 0, 0.04);
     --shadow-card-hover: 0 16px 40px rgba(37, 99, 235, 0.15);
   
-    /* ===== GRADIENTES ===== */
+/*  GRADIENTES  */
     --gradient-primary: linear-gradient(135deg, #2563EB, #4F46E5);
     --gradient-tech: linear-gradient(135deg, #0b1d48, #000000);
     --gradient-health: linear-gradient(135deg, #22C55E, #06B6D4);
     --gradient-hero: linear-gradient(135deg, #2563EB, #06B6D4);
   
-    /* ===== TAMAÑOS ===== */
+/*  TAMAÑOS  */
     --logo-height: 2rem;
-  }
+}
   
-  /* ---------- General ---------- */
-  body {
-    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  }
+/* =========================ENCABEZADO========================== */
+/*---------- Navbar ----------*/
+
   
-  /* ---------- Navbar ---------- */
-  .navbar {
-    background-color: var(--dark-light);
-    box-shadow: 0 2px 12px rgba(193, 27, 27, 0.1);
-  }
-  .navbar-brand img {
-    background-color: var(--border);
-    max-height: var(--logo-height);
-    width: auto;
-  }
-  .navbar-brand img:hover {
-    
-    transform: translatex(-5px);
-  }
-  .navbar .btn-info {
-    background-color: var(--secondary);
-    border-color: var(--secondary);
-    color: var(--white);
-    font-weight: 600;
-  }
-  .navbar .btn-info:hover {
-    background-color: var(--primary);
-    border-color: var(--primary);
-  }
-  .navbar .btn-outline-success {
-    color: var(--success);
-    border-color: var(--success);
-  }
-  .navbar .btn-outline-success:hover {
-    background-color: var(--success);
-    color: var(--white);
-  }
-  
-  /* ---------- Hero ---------- */
-  #inicio {
+/* =================HERO===================== */
+
+/*-- Seccion Inicio --*/
+#inicio {
     padding: 5rem 0;
     background: var(--gradient-tech);
-  }
-  #inicio h1 {
+}
+#inicio h1 {
     background: var(--gradient-hero);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
     display: inline-block;
-  }
-  
-  /* ---------- Badge principal ---------- */
-  .badge.bg-primary {
+}
+.badge.bg-primary {
     background-color: var(--dark-light) !important;
     font-size: 0.9rem;
     padding: 0.5rem 1.2rem;
     letter-spacing: 0.5px;
-  }
-  
-  /* ---------- Indicadores ---------- */
-  .indicadores {
+}
+
+/*-- Indicadores --*/
+.indicadores {
     background-color: var(--dark);
     border-top: 4px solid var(--success);
-    border-bottom: 4px solid var(--accent);
+    border-bottom: 4px solid var(--danger);
     padding: 2.5rem 0;
-  }
-  .indicadores h2 {
+}
+.indicadores h2 {
     color: var(--accent);
     font-size: 3rem;
     font-weight: 700;
-  }
-  .indicadores p {
+}
+.indicadores p {
     color: var(--white);
     font-size: 1.1rem;
     margin-bottom: 0;
-  }
-  .indicadores .col-md-4 {
+}
+.indicadores .col-md-4 {
     padding: 1.5rem;
     transition: transform 0.3s ease;
-  }
-  .indicadores .col-md-4:hover {
+}
+.indicadores .col-md-4:hover {
     transform: translateY(-5px);
-  }
-  .indicadores .col-md-4:not(:last-child) {
+}
+.indicadores .col-md-4:not(:last-child) {
     border-right: 1px solid rgba(255, 255, 255, 0.1);
-  }
+}
   
-  /* ---------- Tarjetas (Beneficios y Áreas) ---------- */
+/*-- Tarjetas Beneficios --*/
   .card {
     border: none;
     border-radius: 16px;
@@ -143,24 +95,24 @@
     font-weight: 600;
   }
   
-  /* ---------- Sección Áreas (fondo oscuro) ---------- */
-  #areas {
-    background-color: var(--dark);
-  }
-  #areas .text-muted {
+/*-- Sección de servicios o características (cards) --*/
+#areas {
+  background-color: var(--dark);
+}
+#areas .text-muted {
     color: rgba(255, 255, 255, 0.7) !important;
-  }
-  #areas .card {
+}
+#areas .card {
     background-image: url(/assets/images/datos.webp);
     background-color: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(4px);
     border: 1px solid rgba(255, 255, 255, 0.08);
     color: var(--white);
-  }
-  #areas .card .text-primary {
+}
+#areas .card .text-primary {
     color: var(--accent) !important;
     font-weight: 700;
-  }
+}
   #areas .card h4 {
     color: var(--white);
     font-weight: 600;
@@ -168,8 +120,8 @@
   #areas .card p {
     color: rgba(255, 255, 255, 0.8);
   }
-  
-  /* ---------- Formulario ---------- */
+
+  /*-- Formulario de contacto --*/
   #solicitud .bg-light-subtle {
     background-color: var(--gray-light) !important;
   }
@@ -206,7 +158,7 @@
     box-shadow: var(--glow-blue), 0 12px 24px rgba(37, 99, 235, 0.25);
   }
   
-  /* ---------- Footer ---------- */
+/* ========================PIE DE PÁGINA======================== */
   footer {
     background-color: var(--dark) !important;
   }
@@ -222,7 +174,7 @@
     font-size: 1.4rem;
   }
   
-  /* ---------- Modal ---------- */
+  /*-- Modal --*/
   .modal-content {
     border-radius: 20px;
     border: none;
@@ -236,7 +188,7 @@
     font-weight: 700;
   }
   
-  /* ---------- Responsive ---------- */
+/* =========================RESPONSIVE========================== */
   @media (max-width: 768px) {
     #inicio {
       padding: 3rem 0;
